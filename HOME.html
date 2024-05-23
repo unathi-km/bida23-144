@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Warner Bros</title>
+		<style>
+		body{
+			font-family: Arial, sans-serif;
+			font-weight: bold;
+			background-color: #4169E1;
+			background-size:cover;
+			}
+		h1, h2{
+			font-size:32px;
+			font-weight: bold;
+			color:#ffffff;
+			margin-bottom:10px;
+			}
+		header{
+			background-color: #4169E1;
+			padding: 10px;
+			}
+			
+		.logo{
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			transform:translateX(-50%);
+			}
+			
+			.logo img{
+			width: 100px;
+			}
+			
+		.search-container{
+			display: flex;
+			align-items:  center;
+			}
+		.search-input{
+			padding: 8px;
+			width: 200px;
+			}
+			
+		.search-button{
+			padding: 8px 16px;
+			background-color: #000000;
+			color: white;
+			border: none;
+			cursor: pointer;
+		}
+		
+		.search-button:hover,
+		.search-button:focus{
+			background-color: #000000;
+			}
+			
+			
+		
+			
+			
+		figure {
+			display: inline-block;
+			text-align:left ;
+			margin: 10px;
+			}
+		figcaption {
+			font-weight: bold;
+			color:#ffffff;
+			}
+		
+			nav{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: #333;
+			}
+			
+			li {
+				float:right;
+			}
+			
+			li a {
+					display: block;
+				color:white;	
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration:none;
+				}
+				
+				li a:hover {
+					background-color: #333;
+					}
+		figure {
+           position: relative;
+		   
+							} 
+
+			figcaption {
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			  width: 100%;
+			  height: 100%;
+			  background-color: rgba(0, 0, 0, 0.7);
+			  color: white;
+			  padding: 10px;
+			  opacity: 0;
+			  transition: opacity 0.3s ease;
+}
+
+		figure:hover figcaption {
+		  opacity: 1;
+		}
+		figure{
+			overflow:hidden;
+			position:relative;
+		}
+
+			.slideshow-container{
+			max-width:100vw;
+			position:relative;
+			margin:auto;
+			}
+			.gallery{
+			display:flex;
+			flex-wrap: wrap;
+			justify-items: center;
+			}
+			.row{
+			display:flex;
+			margin:10px
+			}
+			figure{
+			margin: 10px;
+			text-align; center:
+			}
+			
+			.mySlides{
+			width: 100%;
+			display:none;
+			animation-name:fade;
+			animation-duration:1s;
+			
+			}
+			
+			@keyframes fade{
+			from{
+			opacity:0;
+			}
+			to{
+			opacity:1;
+			{
+			.social-icons {
+				list-style:none;
+				padding:0;
+				marging:0;
+				}
+			.social-icons li:last-child {
+				margin-right: 0;
+				}
+				
+				.social-icons a {
+					display: inline-block;
+					width:30px;
+					height:30px;
+					background-repeat: no-repeat;
+					background-size: cover;
+					text-indent: -9999px;
+					}
+					
+				.social-icons .twitter{
+				background-image: url('twitter.png');
+				}
+				.social-icons .facebook{
+				background-image: url('facebook.png');
+				}
+				.social-icons .pintrest{
+				background-image: url('pintrest.png');
+				}
+				.social-icons .instagram{
+				background-image: url('instagram.png');
+				}
+			footer {
+				background-color: #333;
+				padding: 10px:
+				text-align: right;
+				}
+			footer p{
+				color: white;
+				}
+		}
+
+				
+		</style>
+	</head>
+	<body>
+		<div class="search-container">
+		<form action="https://www.google.com/search" method="get" class="search-bar">
+		<input type="text" class="tv shows,movies,games&amp;app" placeholder="Search...">
+		<button class="search-button">Search</button>
+		</form>
+		
+		</div>
+		
+		<ul id="navlist">
+			<li><a href="feedback.html">Feedback</a></li>
+			<li><a href="gamesandapps.html">Games and Apps</a></li>
+			<li><a href="TV SHOWS.html">TV shows</a></li>
+			<li><a href="MOVIES.html">Movies</a></li>
+			<li><a href="HOME.html">Home</a></li>
+			</ul>
+		<header>
+		<h1>WELCOME TO WARNER BROS!</h1>
+		
+		<section>
+    <div class="slideshow-container">
+        <img class="mySlides" src="fast.jpg" style="display: none;">
+        <img class="mySlides" src="friends.jpg" style="display: block;">
+        <img class="mySlides" src="jjj.jpg" style="display: none;">
+    </div>
+</section>
+
+			
+			
+			<script>
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}
+			slides[slideIndex-1].style.display = "block";
+			setTimeout(showSlides, 2000); // Change image every 2 seconds
+		}
+		</script>
+	
+	
+	<div class="gallery">
+	<div class="row">
+	<figure>
+		<img src="ant bully.jpeg" alt="image 1">
+		<figcaption>
+			<h3>Ant bully</h3>
+			<p>120 minutes</p>
+			
+		</figcaption>
+		
+	</figure>
+	<figure>
+		<img src="black adam.jpeg" alt="image 2">
+		<figcaption>
+		<h3>Black Adam</h3>
+		<p>123 minutes</p>
+		</figcaption>
+	</figure>
+	<figure>
+		<img src="hypnotic.jpeg" alt="image 3">
+		<figcaption>
+		<h3>Hypnotic</h3>
+		<p>156 minutes</p>
+		</figcaption>
+	</figure>
+	<figure>
+		<img src="the lego movie.jpeg" alt="image 4">
+		<figcaption>
+		<h3>The Lego Movie</h3><h3>
+		<p>172 minutes</p>
+		</h3></figcaption>
+	</figure>
+	<figure>
+		<img src="suicide squad.jpeg" alt="image 5">
+		<figcaption>
+		<h3>Suicide Squad</h3>
+		<p>136 minutes</p>
+		</figcaption>
+	</figure>
+	</div>
+	<div class="row">
+	<figure>
+		<img src="matrix.jpeg" alt="image 6">
+		<figcaption>
+		<h3>The Matrix</h3>
+		<p>207 minutes</p>
+		</figcaption>
+	</figure>
+	<figure>
+		<img src="evil dead rise.jpeg" alt="image 7">
+		<figcaption>
+		<h3>Evil Dead Rise</h3>
+		<p>111 minutes</p>
+		</figcaption>
+	</figure>
+	<figure>
+		<img src="iron giant.jpeg" alt="image 8">
+		<figcaption>
+		<h3>Iron Giant</h3>
+		<p>212 minutes</p>
+		</figcaption>
+	</figure>
+	<figure>
+		<img src="joker.jpeg" alt="image 9">
+		<figcaption>
+		<h3>Joker</h3>
+		<p>110 minutes</p>
+		</figcaption>
+	</figure>
+	<figure>
+		<img src="body of lies.jpeg" alt="image 10">
+		<figcaption>
+		<h3>Body of Lies</h3><h3>
+		<p>115 minutes</p><p>
+		</p></h3></figcaption>
+	</figure>
+	</div>
+		</div>
+	<ul class="social-icon">
+		<li><a href="https://twitter.com/Warnerbros/" class="twitter">Twitter</a></li>
+		<li><a href="https://web.facebook.com/warnerbrosent/?_rdc=1&amp;_rdr" class="facebook">Facebook</a></li>
+		<li><a href="https://www.pinterest.com/warnerbrosent/" class="pintrest">Pintrest</a></li>
+		<li><a href="https://www.instagram.com/warnerbrosentertainment/" class="instagram">Instagram</a></li>
+	</ul>
+	<header>
+	<div class="logo">
+	<img src="logo3.jpg" alt="Logo">
+	</div>
+	</header>
+	</section>
+	<footer>
+	<p> 2023 Warner Bros Movies. All rights reserved .</p>
+	</footer>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		
+		</header></body></html>

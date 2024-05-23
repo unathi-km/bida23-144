@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: royalblue; /* Change background color here */
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>We Want to Hear From You!</h2>
+        <p>At [Your Movie Website Name], we strive to provide the best movie experience for our users. Your feedback is incredibly valuable to us, as it helps us understand how we can improve and tailor our services to better suit your needs. Whether you have suggestions, questions, or concerns, we're here to listen. Please take a moment to share your thoughts with us.</p>
+        <form action="submit_feedback.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name (Optional)">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email (Optional)">
+
+            <label for="experience">How would you rate your overall experience on our website?</label><br>
+            <input type="checkbox" id="excellent" name="experience" value="excellent">
+            <label for="excellent">Excellent</label><br>
+            <input type="checkbox" id="good" name="experience" value="good">
+            <label for="good">Good</label><br>
+            <input type="checkbox" id="average" name="experience" value="average">
+            <label for="average">Average</label><br>
+            <input type="checkbox" id="poor" name="experience" value="poor">
+            <label for="poor">Poor</label><br>
+
+            <label for="likes">What do you like most about our website?</label>
+            <textarea id="likes" name="likes" placeholder="Enter your likes here..." rows="4"></textarea>
+
+            <label for="improvements">What do you think could be improved?</label>
+            <textarea id="improvements" name="improvements" placeholder="Enter your suggestions here..." rows="4"></textarea>
+
+            <label for="recommendations">Do you have any specific movie recommendations or requests for features/content?</label>
+            <textarea id="recommendations" name="recommendations" placeholder="Enter your recommendations here..." rows="4"></textarea>
+
+            <label for="comments">Any additional comments or suggestions?</label>
+            <textarea id="comments" name="comments" placeholder="Enter your comments here..." rows="4"></textarea>
+
+            <label for="contact">Would you like us to contact you regarding your feedback?</label><br>
+            <input type="checkbox" id="contact_yes" name="contact" value="yes">
+            <label for="contact_yes">Yes</label><br>
+            <input type="checkbox" id="contact_no" name="contact" value="no">
+            <label for="contact_no">No</label><br>
+
+            <div id="contact_method" style="display: none;">
+                <label for="contact_method">If yes, please provide your preferred contact method:</label>
+                <input type="text" id="contact_method" name="contact_method" placeholder="Your Preferred Contact Method">
+            </div>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+    <script>
+        document.querySelector('input[name="contact"]').addEventListener('change', function() {
+            var contactMethod = document.getElementById('contact_method');
+            if (this.value === 'yes') {
+                contactMethod.style.display = 'block';
+            } else {
+                contactMethod.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
